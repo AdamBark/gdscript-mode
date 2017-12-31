@@ -58,6 +58,8 @@
   (setq gdscript-imenu-generic-expression
 	'((nil "func +\\|class +\\([A-Za-z0-9_]+\\)" 1))))
 
+(defvar gdscript-mode-abbrev-table)
+
 ;;;###autoload
 (define-derived-mode gdscript-mode prog-mode "GDScript"
   "Major mode for editing Godot GDScript files"
