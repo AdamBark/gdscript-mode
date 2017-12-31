@@ -26,6 +26,7 @@
 ;; <https://godotengine.org>
 
 ;;; Code:
+(require 'python)
 
 (defvar gdscript-mode-map
   (make-keymap)
