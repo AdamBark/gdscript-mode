@@ -17,6 +17,7 @@
 
 ;; Author: Adam Bark <adam@adambark.com>
 ;; Version: 1.0
+;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: Godot, gdscript
 ;; URL: https://github.com/AdamBark/gdscript-mode
 
