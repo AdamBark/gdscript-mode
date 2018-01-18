@@ -37,16 +37,16 @@
 (add-to-list 'auto-mode-alist '("\\.gd\\'" . gdscript-mode))
 
 
-;; Generate optimum regexp for keywords
-;; (regexp-opt '("if" "elif" "else" "for" "do" "while" "switch" "case"
-;; 		   "break" "continue" "pass" "return" "class" "extends" "tool"
-;; 		   "signal" "func" "static" "const" "enum" "var" "onready"
-;; 		   "export" "setget" "breakpoint"))
- 
 (defvar gdscript-font-lock-keywords
-  '(("\\<\\(?:break\\(?:point\\)?\\|c\\(?:ase\\|lass\\|on\\(?:st\\|tinue\\)\\)\\|do\\|e\\(?:l\\(?:if\\|se\\)\\|num\\|x\\(?:port\\|tends\\)\\)\\|f\\(?:or\\|unc\\)\\|if\\|onready\\|pass\\|return\\|s\\(?:etget\\|ignal\\|tatic\\|witch\\)\\|tool\\|var\\|while\\)\\>" . font-lock-keyword-face)
-	("func +\\([A-Za-z0-9_]+\\)" (1 font-lock-function-name-face))
-	("\\([A-Za-z0-9_.]+\\)\s*=" (1 font-lock-variable-name-face))))
+  `((,(concat "\\<"
+              (regexp-opt '("if" "elif" "else" "for" "do" "while" "switch" "case"
+	                    "break" "continue" "pass" "return" "class" "extends" "tool"
+	                    "signal" "func" "static" "const" "enum" "var" "onready"
+	                    "export" "setget" "breakpoint"))
+              "\\>")
+     . font-lock-keyword-face)
+    ("func +\\([A-Za-z0-9_]+\\)" (1 font-lock-function-name-face))
+    ("\\([A-Za-z0-9_.]+\\)\s*=" (1 font-lock-variable-name-face))))
 
 (defvar gdscript-mode-syntax-table
   (let ((st (make-syntax-table)))
